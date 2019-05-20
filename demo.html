@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head><title>Auto Checkin Fanpage</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/style/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="/style/images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/style/images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/style/images/icons/favicon-114x114.png">
+    <!--Loading bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+    <link type="text/css" rel="stylesheet" href="/style/vendors/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="/style/vendors/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/style/vendors/bootstrap/css/bootstrap.min.css">
+    <!--LOADING STYLESHEET FOR PAGE-->
+    <link type="text/css" rel="stylesheet" href="/style/vendors/intro.js/introjs.css">
+    <link type="text/css" rel="stylesheet" href="/style/vendors/calendar/zabuto_calendar.min.css">
+    <!--Loading style vendors-->
+    <link type="text/css" rel="stylesheet" href="/style/vendors/animate.css/animate.css">
+    <link type="text/css" rel="stylesheet" href="/style/vendors/jquery-pace/pace.css">
+    <link type="text/css" rel="stylesheet" href="/style/vendors/iCheck/skins/all.css">
+    <link type="text/css" rel="stylesheet" href="/style/vendors/jquery-news-ticker/jquery.news-ticker.css">
+    <!--Loading style-->
+    <link type="text/css" rel="stylesheet" href="/style/css/themes/style1/pink-violet.css" id="theme-change" class="style-change color-change">
+    <link type="text/css" rel="stylesheet" href="/style/css/style-responsive.css">
+	<script src="/style/js/jquery-1.10.2.min.js"></script>
+	<script src="/style/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/style/js/jquery-ui.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8564987210667117",
+    enable_page_level_ads: true
+  });
+</script>
+</head><body class="sidebar-colors">
+<div><!--BEGIN TOPBAR-->
+    <div class="page-header-topbar" style="position:fixed; top:0px;">
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a id="logo" href="" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">Team Adsense</span><span style="display: none" class="logo-text-icon">A</span></a></div>
+            <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+            </div>
+        </nav>
+	</div>
+    <!--END TOPBAR-->
+    <div id="wrapper">
+        <script>
+            $(document).ready(function () {
+                $("li.sbpage").addClass("active");
+                $("li.sbpage-checkin").addClass("active");
+            });
+        </script>
+	<!--BEGIN SIDEBAR MENU-->
+<nav id="sidebar" role="navigation" data-position="right" class="navbar-default navbar-static-side" style="position:fixed; top:50px;">
+    <div class="sidebar-collapse menu-scroll">
+        <ul id="side-menu" class="nav">
+            <li class="user-panel">
+                <div class="clearfix"></div>
+            </li>
+            <li class="sbhome" style="border-top: 1px #ccc solid"><a href="/"><i class="fa fa-tachometer fa-fw">
+                        <div class="icon-bg bg-orange"></div>
+                    </i><span class="menu-title">Trang chủ</span></a></li>
+            <li class="sbtoken"><a href="#"><i class="fa fa-desktop fa-fw">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">Công cụ token</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li class="sbcheck-token"><a href="/token/check-token.html"><i class="fa fa-check"></i><span class="submenu-title">Check token live</span></a></li>
+                    <li class="sbloc-token"><a href="/token/loc-trung.html"><i class="fa fa-filter"></i><span class="submenu-title">Lọc trùng token</span></a></li>
+                    <li class="sbdinh-dang"><a href="/token/loc-dinh-dang.html"><i class="fa fa-key"></i><span class="submenu-title">Lọc dịnh dạng token</span></a></li>
+                </ul>
+            </li>
+            <li class="sbgroup"><a href="#"><i class="fa fa-group fa-fw">
+                    <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">Công cụ nhóm</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level sbgroup-don">
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span class="submenu-title">Dọn dẹp nhóm</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level collapse" style="height: 0px;">
+                            <li class="sbgroup-delpost"><a href="/group/xoa-post-group.html"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Xóa All Post Group</span></a></li>
+                            <li class="sbgroup-delcmt"><a href="/group/xoa-comment.html"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Xóa Comment spam</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sbgroup-join"><a href="/group/join-group.html"><i class="fa fa-sign-in"></i><span class="submenu-title">Tham gia nhóm</span></a></li>
+					<li class="sbgroup-add"><a href="/group/add-group.html"><i class="fa fa-sign-in"></i><span class="submenu-title">Thêm bạn vào nhóm</span></a></li>
+                    <li class="sbgroup-year"><a href="/group/check-nam-group.html"><i class="fa fa-calendar"></i><span class="submenu-title">Check year group</span></a></li>
+                    <li class="sbgroup-admin"><a href="/group/set-admin-group.html"><i class="fa fa-user"></i><span class="submenu-title">Set Admin group</span></a></li>
+                </ul>
+            </li>
+            <li class="sbpage"><a href="#"><i class="fa fa-desktop fa-fw">
+                        <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">Công cụ trang</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li class="sbpage-checkin"><a href="/page/checkin-fanpage.html"><i class="fa fa-map-marker"></i><span class="submenu-title">Checkin Fanpage</span></a></li>
+                </ul>
+            </li>
+            <li class="sbspam"><a href="#"><i class="fa fa-group fa-fw">
+                        <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">Công cụ spam</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li class=""><a href="#"><i class="fa fa-angle-right"></i><span class="submenu-title">Auto Post Wall</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level collapse" style="height: 0px;">
+                            <li class="sbspam-anhgr"><a href="/spam/post-anh-group.html"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Post Ảnh Groups</span></a></li>
+                            <li class="sbspam-anhfr"><a href="/spam/post-anh-friend.html"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Post Ảnh Friends</span></a></li>
+                            <li class="sbspam-linkgr"><a href="/spam/post-link-group.html"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Post Link Groups</span></a></li>
+                            <li class="sbspam-linkfr"><a href="/spam/post-anh-friend.html"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Post Link Friends</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sbspam-share"><a href="/spam/auto-share.html"><i class="fa fa-share"></i><span class="submenu-title">Auto share</span></a></li>
+					<li class="sbspam-sharen"><a href="/spam/auto-share-nhanh.html"><i class="fa fa-share"></i><span class="submenu-title">Auto share V2</span></a></li>
+                    <li class="sbspam-tag"><a href="/spam/auto-tag.html"><i class="fa fa-tag"></i><span class="submenu-title">Auto tag friend's</span></a></li>
+                </ul>
+            </li>
+            <li class="sbseeding"><a href="#"><i class="fa fa-volume-up fa-fw">
+                        <div class="icon-bg bg-red"></div>
+                    </i><span class="menu-title">Công cụ seeding</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li class="sbseeding-like"><a href="/seeding/auto-like-comment-follow.html"><i class="fa fa-thumbs-up"></i><span class="submenu-title">Auto like,Comment,Follow</span><span class="fa arrow"></span></a></li>
+                    <li class="sbseeding-nt"><a href="/seeding/nhan-tin.html"><i class="fa fa-comments-o"></i><span class="submenu-title">Gửi tin nhắn bạn bè</span><span class="fa arrow"></span></a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.facebook.com/xoavn" target="_blank"><i class="fa fa-envelope-o">
+                        <div class="icon-bg bg-primary"></div>
+                    </i><span class="menu-title">Liên hệ báo lỗi</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--END SIDEBAR MENU-->	<!--BEGIN PAGE WRAPPER-->
+        <div id="page-wrapper"><!--BEGIN TITLE & BREADCRUMB PAGE-->
+            <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                <div class="page-header pull-left">
+                    <div class="page-title">Auto Checkin Fanpage</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a href="/">Trang chủ</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                    <li class="active"><a href="">Auto Checkin Fanpage</a></li>
+                </ol>
+                <div class="clearfix"></div>
+            </div>
+            <!--END TITLE & BREADCRUMB PAGE--><!--BEGIN CONTENT-->
+            <div class="page-content">
+				<script>
+    $(document).ready(function () {
+        $('#btn_checkin').click(function () {
+            var fid = $('#fid').val().trim();
+            input = $.trim($("#token").val()).split("\n");
+            $('#alltoken').html(input.length);
+            var delay = $('#delay').val().trim();
+            var noidung = $('#noidung').val();
+            if(input == '' || fid == '' || delay ==''){
+                alert('Bạn chưa nhập đầy đủ thông tin');
+                return false;
+            }
+            $('#btn_checkin').html('Đang checkin <img src="/style/images/icons/moving-line.gif">');
+            for (var a = 0; a < input.length; a++) {
+                $.post("/inc/system/page_checkin.php", {
+                    fid: fid,
+                    token: input[a],
+                    noidung: noidung,
+                    delay: delay
+                }).done(function (html) {
+                    $('#btn_checkin').html('<i class="fa fa-check"></i> Auto Checkin');
+                    $('#status').prepend(html);
+                    checked ++;
+                });
+            }
+            
+        });
+    });
+
+</script> 
+
+<div class="col-lg-6">
+    <div class="portlet box portlet-primary" style="height:690px">
+        <div class="portlet-header"> <i class="fa fa-cog"></i> Cấu hình Auto checkin</div>
+        <div class="portlet-body">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                    <textarea placeholder="List Token" class="form-control" id="token" rows="10" style="resize: none;"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-comments-o"></i></span>
+                    <textarea placeholder="Nội dung Checkin" class="form-control" id="noidung" rows="10" style="resize: none;"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-hand-o-right"></i></span>
+                    <input type="text" class="form-control" placeholder="Nhập ID Fanpage" id="fid">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-orange" data-target="#popup_id" data-toggle="modal"><i class="fa fa-folder-open-o"></i> GET ID Fanpage</button>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                    <input type="number" min="0" class="form-control" placeholder="Nhập thời gian chờ giữa 2 lần checkin (giây)" id="delay">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="btn_checkin" class="btn btn-green btn-block"><i class="fa fa-check"></i> Auto Checkin</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BÁO CÁO -->
+<div class="col-lg-6">
+    <div class="portlet box portlet-violet panel">
+        <div class="portlet-header">
+            <div class="caption"><i class="icon-bar-chart"></i>Báo cáo Checkin </div>
+            <div class="tools">
+                Tổng token: <span id="alltoken"> 0 </span>
+            </div>
+        </div>
+        <div class="portlet-body" style="height: 650px; overflow: auto; background-color:#f8f8f8">
+            <div class="list-group">
+                <div id="status"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="popup_id">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                <h4 class="modal-title">Lấy ID FanPage từ link</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span></span>
+                        <input type="text" class="form-control" id="link" placeholder="Nhập Link Fanpage cần lấy ID" required>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-green" id="get_id">GET</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group" style="display: none" id="form_get">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="load"></span>
+                        <div class="form-group has-success has-feedback" >
+                            <input type="text" id="get_id_done" class="form-control" placeholder="ID nằm ở đây khi load xong" aria-describedby="inputSuccess5Status" readonly="readonly" onclick="this.select();" >
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#get_id').click(function () {
+            var link = $('#link').val().trim();
+            if (link == '') {
+                alert('Bạn chưa nhập link');
+                return false;
+            }
+            $('#get_id_done').html('');
+            $('#form_get').show();
+            $('#load').html('<img src="/style/images/icons/moving-line.gif">');
+            $.post("/inc/system/findid.php", {
+                link: link
+            }).done(function (html) {
+                $('#load').html('ID');
+                document.getElementById("get_id_done").value = html;
+            });
+        });
+    });
+</script>             </div>
+			<div id="area-chart-spline" style="width: 1%; height:10px; display:none"></div>
+            <!--END CONTENT-->
+<!--BEGIN FOOTER-->
+            <div id="footer">
+                <div class="copyright">2016 Chip Plus</div>
+            </div>
+            <!--END FOOTER--></div>
+        <!--END PAGE WRAPPER--></div>
+</div>
+<!--loading bootstrap js-->
+<script src="/style/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="/style/js/html5shiv.js"></script>
+<script src="/style/js/respond.min.js"></script>
+<script src="/style/vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="/style/vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="/style/js/jquery.menu.js"></script>
+<script src="/style/vendors/jquery-pace/pace.min.js"></script>
+<script src="/style/vendors/holder/holder.js"></script>
+<script src="/style/vendors/responsive-tabs/responsive-tabs.js"></script>
+<!--CORE JAVASCRIPT-->
+<script src="/style/js/main.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-66388250-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-66388250-1');
+</script>
+
+</body>
+</html>
